@@ -1,0 +1,11 @@
+name: NagrodySocial
+version: 1.0.0
+main: pl.minestar.nagrodysocial.NagrodySocialPlugin
+api-version: '1.21'
+commands:
+  nagroda:
+    aliases: [dc, discord]
+    description: Otwiera GUI nagród social
+permissions:
+  nagrodysocial.admin:
+    default: op
