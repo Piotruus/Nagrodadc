@@ -1,0 +1,69 @@
+# NagrodySocial - Paper 1.21.4
+# 1 godzina jest WSPÓLNYM odblokowaniem dla wszystkich 3 nagród.
+# Gracz może połączyć social wcześniej, ale odebrać dopiero po 3600 sekundach gry.
+
+playtime-required-seconds: 3600
+
+gui:
+  title: "&8» &5&lNAGRODY SOCIAL &8«"
+  size: 27
+
+rewards:
+  discord:
+    slot: 11
+    material: "DISCORD"
+    name: "&9&lDISCORD"
+    reward-name: "&4&lFire&6&lbox &e&l1x"
+    command: "getcase give %player% firebox 2"
+    link: "https://discord.gg/TWOJ_SERWER"
+  youtube:
+    slot: 13
+    material: "YOUTUBE"
+    name: "&c&lYouTube"
+    reward-name: "&4&lFire&6&lbox &e&l1x"
+    command: "getcase give %player% firebox 2"
+    link: "https://www.youtube.com/@flowymc.pl2026"
+  tiktok:
+    slot: 15
+    material: "TIKTOK"
+    name: "&5&lTikTok"
+    reward-name: "&4&lFire&6&lbox &e&l1x"
+    command: "getcase give %player% firebox 2"
+    link: "https://www.tiktok.com/@flowymc_"
+
+discord:
+  enabled: true
+  bot-token: "WSTAW_TOKEN_BOTA_TUTAJ"
+  guild-id: "1558868120867840232"
+  verification-channel-id: "1565421084847771869"
+  api-url: "http://127.0.0.1:8787"
+  api-secret: "TAJNY_SEKRET_TAKI_SAM_JAK_W_BOT_ENV"
+  # Bot reaguje na /nagroda KOD i wiąże konto Discord z Minecraft.
+  code-expire-seconds: 600
+
+web-verification:
+  enabled: false
+  host: "0.0.0.0"
+  port: 8080
+  # Dla YouTube/TikTok potrzebne są OAuth client ID/secret.
+  # Sam publiczny link do kanału NIE pozwala sprawdzić, czy konkretny użytkownik
+  # zasubskrybował/obserwuje kanał.
+  youtube:
+    client-id: ""
+    client-secret: ""
+    redirect-uri: "http://127.0.0.1:8080/oauth/youtube/callback"
+    channel-id: "WSTAW_ID_KANALU"
+  tiktok:
+    client-key: ""
+    client-secret: ""
+    redirect-uri: "http://127.0.0.1:8080/oauth/tiktok/callback"
+    creator-username: "TWOJ_PROFIL"
+
+messages:
+  no-permission: "&cNie masz uprawnień."
+  linked: "&aPołączono pomyślnie!"
+  not-linked: "&cNie jesteś jeszcze połączony."
+  reward-taken: "&aOdebrano nagrodę: &4&lFire&6&lbox &e&l1x&a!"
+  already-taken: "&cTę nagrodę już odebrałeś."
+  time-left: "&cMusisz spędzić jeszcze &e%time%&c na serwerze!"
+  verification-pending: "&eWeryfikacja trwa. Sprawdź ponownie za chwilę."
